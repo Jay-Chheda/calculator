@@ -1,0 +1,1 @@
+A calculator using html, css, and JS as a part of The Odin Project curriculum. 
