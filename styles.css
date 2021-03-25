@@ -27,30 +27,34 @@ button:hover{
 }
 .calculator-grid{
     display: grid;
-    min-height: 50vh;
+    min-height: 60vh;
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: minmax(1fr,auto) repeat(5,1fr);
-    width: 30vw;
+    width: 40vw;
     position: absolute;
     left: 50%;
-    top:50%;
-    transform: translate(-50%,-50%);
+    top:30%;
+    transform: translate(-50%,-30%);
     border: 1px solid gray;
     border-radius: 5px;
-   justify-content: center;
-   gap: 0 0 ;
+   
    
    
     
 }
 
-@media(max-width:1200px){
+@media(max-width:1300px){
     .calculator-grid{
-        min-width:100vw;
+        min-width:80vw;
         min-height: 80vh;
     }
 }
-
+@media(max-width:600px){
+    .calculator-grid{
+        min-width:100vw;
+        min-height: 70vh;
+    }
+}
 .output{
     grid-column: 1/-1;
     text-align: right;
@@ -60,6 +64,9 @@ button:hover{
     font-size: 2rem;
     background: black;
     align-self: stretch;
+    padding-right: 1em;
+    min-height: 2em;
+   
 }
 
 .two-span-ac{
