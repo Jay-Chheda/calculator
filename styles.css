@@ -1,13 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 *,*::before,*::after{
-    font-weight: normal;
+    
     margin: 0;
     padding:0;
     box-sizing: border-box;
 }
+a{
+    text-decoration: none;
+    color:#222831;
+}
+
 body{
-    background-color: #dddddd;
+    background-color: #f7f6e7;
     font-family: 'Roboto', sans-serif;
     font-size: 2vh;
     color: #dddddd;
@@ -30,14 +35,15 @@ button:hover{
     display: grid;
     min-height: 60vh;
     grid-template-columns: repeat(4,1fr);
-    grid-template-rows: minmax(1fr,auto) repeat(5,1fr);
+    
     width: 40vw;
     position: absolute;
     left: 50%;
     top:30%;
     transform: translate(-50%,-30%);
-    border: 1px solid gray;
-    border-radius: 5px;
+   
+    
+    
    
    
    
@@ -63,7 +69,7 @@ button:hover{
     word-break: break-all;
     padding-top:20px;
     font-size: 2rem;
-    background: black;
+    background:rgba(0, 0, 0, 0.863);
     align-self: stretch;
     padding-right: 1em;
     min-height: 2em;
@@ -101,10 +107,15 @@ button:hover{
 }
 
 #footer{
+    background-color: #f2a154;
+    font-size: 1rem;
     position: absolute;
-    color: #f05454;
+    
     text-align: center;
     display: inline-block;
     width: 100%;
-    bottom: 5vh;
+    bottom: 0;
+    padding: 3vh;
+    color: #222831;
+    
 }
