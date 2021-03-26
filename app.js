@@ -9,17 +9,7 @@ const allClearButton = document.querySelector('[data-ac]');
 let firstOperand = null;
 let secondOperand = null;
 let currentOperation = null;
-allClear();
-
-
-//event listeners start here........
-
-allClearButton.addEventListener('click', allClear);
-
-clearButton.addEventListener('click',clearOne);
-
-
-//.......event listeners end here 
+let resetScreen = false;
 
 
 
@@ -27,29 +17,55 @@ clearButton.addEventListener('click',clearOne);
 
 
 
-
-
-
-
-
-
-function allClear(){
-    displayScreen.innerText = '0';
-    firstOperand = null;
-    secondOperand = null;
-    currentOperation = null
-
-}
-
-function clearOne(){
-    if (displayScreen.innerText == 0) return;
-    else {
-        displayScreen.innerText = displayScreen.innerText.toString().slice(0,-1);
-        if(displayScreen.innerText ==''){
-            displayScreen.innerText = '0';
-        }
+function evaluate(operator,number1,number2){
+    let result;
+    switch (operator) {
+        case '+':
+            result = add(number1,number2);
+            break;
+        case '-':
+            result = subtract(number1,number2);
+            break;
+        case 'x':
+            result = multiply(number1,number2);
+            break;
+        case '/':
+            result = divide(number1,number2);
+            break;
+        default:
+            result = null;
     }
-   
-
+    return result;
+    
 }
 
+
+
+
+
+
+
+function add(number1,number2){
+    return parseFloat(number1)+ parseFloat(number2);
+}
+
+
+function subtract(number1,number2){
+    return parseFloat(number1)-parseFloat(number2);
+}
+
+
+function multiply(number1,number2){
+    return parseFloat(number1)*parseFloat(number2);
+}
+
+
+function divide(number1,number2){
+    return parseFloat(number1)/parseFloat(number2);
+}
+
+
+function resetDisplay(){
+    displayScreen.innerText = '';
+    resetScreen =false;
+}

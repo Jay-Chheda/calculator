@@ -25,6 +25,7 @@ button:hover{
     color: #30475e;
     background: #dddddd;
 }
+
 .calculator-grid{
     display: grid;
     min-height: 60vh;
@@ -97,4 +98,13 @@ button:hover{
 .operator:hover{
     background: #dddddd;
     color: #f05454;
+}
+
+#footer{
+    position: absolute;
+    color: #f05454;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    bottom: 5vh;
 }
